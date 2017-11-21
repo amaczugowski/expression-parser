@@ -287,30 +287,30 @@ fun readTokens(prevResult: Int): List<Token> {
 }
 
 fun printUsage() {
-    println("Valid Operations:")
-    println()
-    println("    Unary Ops:")
-    println("        '~'       bitwise inverse")
-    println("        '!'       unary negation")
-    println()
-    println("    Binary Ops:")
-    println("        '+'       add")
-    println("        '-'       subtract")
-    println("        '*'       multiply")
-    println("        '/'       divide")
-    println("        '%'       modulus")
-    println("        '&'       bitwise and")
-    println("        '|'       bitwise or")
-    println("        '^'       bitwise xor")
-    println()
-    println("    Numbers:")
-    println("        [0-9]+    32-bit decimal integer value")
-    println("        '_'       previous result")
-    println()
-    println("    Infix Only:")
-    println("        '('       left parenthesis")
-    println("        ')'       right parenthesis")
-    println()
+    println("""|Valid Operations:
+
+               |    Unary Ops:
+               |        '~'       bitwise inverse
+               |        '!'       unary negation
+
+               |    Binary Ops:
+               |        '+'       add
+               |        '-'       subtract
+               |        '*'       multiply
+               |        '/'       divide
+               |        '%'       modulus
+               |        '&'       bitwise and
+               |        '|'       bitwise or
+               |        '^'       bitwise xor
+
+               |    Numbers:
+               |        [0-9]+    32-bit decimal integer value
+               |        '_'       previous result
+
+               |    Infix Only:
+               |        '('       left parenthesis
+               |        ')'       right parenthesis
+            """.trimMargin())
 }
 
 fun main(args: Array<String>) {
