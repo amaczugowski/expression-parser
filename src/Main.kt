@@ -143,7 +143,7 @@ fun parsePostfix(tokens: List<Token>): Int {
             }
             is ParenToken -> {
                 throw UnsupportedOperationException(
-                        "${it.paren} is not a supported operation"
+                        "${it.paren} is not a supported operation in postfix"
                 )
             }
         }
@@ -316,7 +316,7 @@ fun printUsage() {
 fun main(args: Array<String>) {
     println("Enter 0 for Infix, 1 for Postfix, 2 for Help: ")
     val choice = sc.readLine().toInt()
-    require(choice in 0..2) { "Not a valid choice" }
+    require(choice in 0..2) { "$choice is not a valid choice" }
 
     if (choice == 2) {
         printUsage()
