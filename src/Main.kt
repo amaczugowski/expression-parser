@@ -59,24 +59,12 @@ fun listFromInput(input: String, prevResult: Int): List<String> {
 fun tokensFromList(li: List<String>): List<Token> {
     return li.map {
         when {
-            it in unOpStrings -> {
-                UnaryOpToken(it[0])
-            }
-            it in addOpStrings -> {
-                AddOpToken(it[0])
-            }
-            it in mulOpStrings -> {
-                MulOpToken(it[0])
-            }
-            it in binOpStrings -> {
-                BinOpToken(it[0])
-            }
-            it in parenStrings -> {
-                ParenToken(it[0])
-            }
-            it.isNotEmpty() && it.all { it.isDigit() } -> {
-                NumToken(it.toInt())
-            }
+            it in unOpStrings -> UnaryOpToken(it[0])
+            it in addOpStrings -> AddOpToken(it[0])
+            it in mulOpStrings -> MulOpToken(it[0])
+            it in binOpStrings -> BinOpToken(it[0])
+            it in parenStrings -> ParenToken(it[0])
+            it.isNotEmpty() && it.all { it.isDigit() } -> NumToken(it.toInt())
             else -> throw IllegalArgumentException()
         }
     }
@@ -217,7 +205,6 @@ fun binExpr(tsc: TokenScanner): ParseResult {
         is UnaryOpToken -> unOpToFun(op1)(num1)
         else -> num1
     }
-
     return binExprPred(tsc, newNum1)
 }
 
