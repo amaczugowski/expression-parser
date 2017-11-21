@@ -102,9 +102,9 @@ fun mulOpToFun(token: MulOpToken): (i: Int, j: Int) -> Int = when (token.op) {
 }
 
 fun binOpToFun(token: BinOpToken): (i: Int, j: Int) -> Int = when (token.op) {
-    '&' -> { i, j -> i.and(j) }
-    '|' -> { i, j -> i.or(j) }
-    '^' -> { i, j -> i.xor(j) }
+    '&' -> { i, j -> i and j }
+    '|' -> { i, j -> i or j }
+    '^' -> { i, j -> i xor j }
     else -> {
         throw UnsupportedOperationException(
                 "${token.op} is not a supported op"
@@ -275,17 +275,51 @@ fun parseInfix(tokens: List<Token>): Int {
     return num
 }
 
+fun readTokens(prevResult: Int): List<Token> {
+    val input = sc.readLine()
+
+    if (input == "q") {
+        System.exit(0)
+    }
+
+    val strings = listFromInput(input, prevResult)
+    return tokensFromList(strings)
+}
+
+fun printUsage() {
+    println("Valid Operations:")
+    println()
+    println("    Unary Ops:")
+    println("        '~'       bitwise inverse")
+    println("        '!'       unary negation")
+    println()
+    println("    Binary Ops:")
+    println("        '+'       add")
+    println("        '-'       subtract")
+    println("        '*'       multiply")
+    println("        '/'       divide")
+    println("        '%'       modulus")
+    println("        '&'       bitwise and")
+    println("        '|'       bitwise or")
+    println("        '^'       bitwise xor")
+    println()
+    println("    Numbers:")
+    println("        [0-9]+    32-bit decimal integer value")
+    println("        '_'       previous result")
+    println()
+    println("    Infix Only:")
+    println("        '('       left parenthesis")
+    println("        ')'       right parenthesis")
+    println()
+}
+
 fun main(args: Array<String>) {
     println("Enter 0 for Infix, 1 for Postfix, 2 for Help: ")
     val choice = sc.readLine().toInt()
     require(choice in 0..2) { "Not a valid choice" }
 
     if (choice == 2) {
-        println("Valid Operations: ")
-        println("  Unary: ~ bitwise inverse, ! unary negation")
-        println("  Binary: + add, - subtract, * multiply, / divide, % modulus")
-        println("  Numbers: [0-9]+ 32-bit integer values, _ previous result")
-        println("  Other (Infix only): ( left parenthesis, ) right parenthesis")
+        printUsage()
         System.exit(0)
     }
 
@@ -298,14 +332,7 @@ fun main(args: Array<String>) {
             try {
                 println("Enter an infix expression:")
 
-                val input = sc.readLine()
-
-                if (input == "q") {
-                    System.exit(0)
-                }
-
-                val strings = listFromInput(input, prevResult)
-                val tokens = tokensFromList(strings)
+                val tokens = readTokens(prevResult)
 
                 prevResult = parseInfix(tokens)
                 println(prevResult)
@@ -317,14 +344,7 @@ fun main(args: Array<String>) {
             try {
                 println("Enter a postfix expression:")
 
-                val input = sc.readLine()
-
-                if (input == "q") {
-                    System.exit(0)
-                }
-
-                val strings = listFromInput(input, prevResult)
-                val tokens = tokensFromList(strings)
+                val tokens = readTokens(prevResult)
 
                 prevResult = parsePostfix(tokens)
                 println(prevResult)
