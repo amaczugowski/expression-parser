@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb0b8fc8-529f-43a5-ac63-276f4d24c44e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/expression-parser/MainTestKt.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MainTest.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/expression-parser/META-INF/expression-parser.kotlin_module" afterPath="$PROJECT_DIR$/out/production/expression-parser/META-INF/expression-parser.kotlin_module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/expression-parser/MainKt.class" afterPath="$PROJECT_DIR$/out/production/expression-parser/MainKt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expression-parser.iml" afterPath="$PROJECT_DIR$/expression-parser.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.kt" afterPath="$PROJECT_DIR$/src/Main.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7733">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="12062">
+              <caret line="326" column="0" lean-forward="true" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
               </folding>
@@ -32,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainTest.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainTest.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3663">
@@ -56,6 +51,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>else</find>
+      <find>var</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -69,8 +65,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.kt" />
         <option value="$PROJECT_DIR$/src/MainTest.kt" />
+        <option value="$PROJECT_DIR$/src/Main.kt" />
       </list>
     </option>
   </component>
@@ -382,7 +378,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511247039361</updated>
-      <workItem from="1511247042790" duration="9462000" />
+      <workItem from="1511247042790" duration="10069000" />
     </task>
     <servers />
   </component>
@@ -419,7 +415,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9462000" />
+    <option name="totallyTimeSpent" value="10069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1908" y="0" width="1944" height="2082" extended-state="0" />
@@ -435,7 +431,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Scheme.REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33351833" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33351833" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -470,22 +466,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7733">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3663">
           <caret line="99" column="9" lean-forward="false" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12062">
+          <caret line="326" column="0" lean-forward="true" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
           </folding>
         </state>
       </provider>

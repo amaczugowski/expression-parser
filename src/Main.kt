@@ -23,8 +23,8 @@ class TokenScanner(val tokenList: List<Token>) {
     override fun toString(): String = "($idx): $tokenList"
 }
 
-val unOpChars = setOf('~', '!')
-val unOpStrings = unOpChars.map { it.toString() }.toSet()
+val unaryOpChars = setOf('~', '!')
+val unaryOpStrings = unaryOpChars.map { it.toString() }.toSet()
 
 val addOpChars = setOf('+', '-')
 val addOpStrings = addOpChars.map { it.toString() }.toSet()
@@ -44,7 +44,7 @@ fun listFromInput(input: String, prevResult: Int): List<String> {
     val sb = StringBuilder()
     input.forEach {
         when (it) {
-            in unOpChars,
+            in unaryOpChars,
             in addOpChars,
             in mulOpChars,
             in binOpChars,
@@ -59,7 +59,7 @@ fun listFromInput(input: String, prevResult: Int): List<String> {
 fun tokensFromList(li: List<String>): List<Token> {
     return li.map {
         when {
-            it in unOpStrings -> UnaryOpToken(it[0])
+            it in unaryOpStrings -> UnaryOpToken(it[0])
             it in addOpStrings -> AddOpToken(it[0])
             it in mulOpStrings -> MulOpToken(it[0])
             it in binOpStrings -> BinOpToken(it[0])
