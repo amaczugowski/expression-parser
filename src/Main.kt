@@ -2,14 +2,14 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.util.*
 
-open class Token
-open class BinaryOpToken: Token()
-data class UnaryOpToken(val op: Char): Token()
-data class AddOpToken(val op: Char): BinaryOpToken()
-data class MulOpToken(val op: Char): BinaryOpToken()
-data class BinOpToken(val op: Char): BinaryOpToken()
-data class NumToken(val num: Int): Token()
-data class ParenToken(val paren: Char): Token()
+interface Token
+interface BinaryOpToken: Token
+data class UnaryOpToken(val op: Char): Token
+data class AddOpToken(val op: Char): BinaryOpToken
+data class MulOpToken(val op: Char): BinaryOpToken
+data class BinOpToken(val op: Char): BinaryOpToken
+data class NumToken(val num: Int): Token
+data class ParenToken(val paren: Char): Token
 
 data class ParseResult(val num: Int, val op: UnaryOpToken? = null)
 
@@ -23,22 +23,27 @@ class TokenScanner(val tokenList: List<Token>) {
     override fun toString(): String = "($idx): $tokenList"
 }
 
+
 val unaryOpChars = setOf('~', '!')
-val unaryOpStrings = unaryOpChars.map { it.toString() }.toSet()
+val unaryOpStrings = strSetFromChrSet(unaryOpChars)
 
 val addOpChars = setOf('+', '-')
-val addOpStrings = addOpChars.map { it.toString() }.toSet()
+val addOpStrings = strSetFromChrSet(addOpChars)
 
 val mulOpChars = setOf('*', '/', '%')
-val mulOpStrings = mulOpChars.map { it.toString() }.toSet()
+val mulOpStrings = strSetFromChrSet(mulOpChars)
 
 val binOpChars = setOf('&', '|', '^')
-val binOpStrings = binOpChars.map { it.toString() }.toSet()
+val binOpStrings = strSetFromChrSet(binOpChars)
 
 val parenChars = setOf('(', ')')
-val parenStrings = parenChars.map { it.toString() }.toSet()
+val parenStrings = strSetFromChrSet(parenChars)
 
 val sc = BufferedReader(InputStreamReader(System.`in`))
+
+
+fun strSetFromChrSet(set: Set<Char>): Set<String> =
+        set.map { it.toString() }.toSet()
 
 fun listFromInput(input: String, prevResult: Int): List<String> {
     val sb = StringBuilder()
