@@ -1,6 +1,6 @@
 # expression-parser
 
-This program can parse mathematical expressions written in postfix or infix using recursive decent parsing. 
+This program can evaluate mathematical expressions written in infix or postfix using recursive decent parsing. 
 The supported operations are listed below.
 
 ## Valid Operations
